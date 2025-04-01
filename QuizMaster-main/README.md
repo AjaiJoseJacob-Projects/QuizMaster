@@ -1,10 +1,3 @@
-Group 5
-
-* Amen George
-* Reshma Mol Karottuputhenparambil Ravichandran
-* Muhammed Arif Kallarackal Haris
-* Ajai Jose Jacob
-
 App name : QuizMaster
 
 QuizMaster will allow users to do various quizzes and get the results immediately. Different types of tests are available in the app for the users to participarte. Whether you're looking to learn something new or test your existing knowledge, QuizMaster is a perfect solution.
