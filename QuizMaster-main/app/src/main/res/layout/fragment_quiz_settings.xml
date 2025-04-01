@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionSettingsFragment"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!--Added settings for the app. This was already implemented earlier -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Details"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ -"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date of Birth"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:clickable="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="9dp"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            >
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp"
+                android:layout_marginRight="5dp"
+                android:checked="true"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp"
+                android:layout_marginRight="5dp"/>
+
+            <RadioButton
+                android:id="@+id/radio_other"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of the Quiz"
+        android:textSize="18dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"/>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_radio_gp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mcq"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="MCQ"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_marginRight="8dp"
+                android:textAlignment="center"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/t_or_f"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="True/False"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Difficulty"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/difficulty_radio_gp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/easy_rb"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Easy"
+                android:checked="true"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp"
+                android:layout_marginRight="8dp"/>
+
+            <RadioButton
+                android:id="@+id/med_rb"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Med"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp"
+                android:layout_marginRight="8dp"/>
+
+            <RadioButton
+                android:id="@+id/hard_rb"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Hard"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text"
+                android:elevation="4dp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the number of questions"
+        android:layout_marginBottom="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/no_of_questions" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the timer duration (in seconds)"
+        android:layout_marginBottom="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/timer_duration" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sub_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Settings"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#E29264"/>
+
+</LinearLayout>
